@@ -1,0 +1,17 @@
+name: '${name}'
+version: '${version}'
+main: '${mainClass}'
+api-version: '1.21'
+author: '${author}'
+
+commands:
+  ${commandPrefix}:
+    description: ${name} base command
+    usage: /${commandPrefix} <subcommand>
+    permission: ${permissionPrefix}.use
+
+permissions:
+  ${permissionPrefix}.use:
+    default: true
+  ${permissionPrefix}.admin:
+    default: op

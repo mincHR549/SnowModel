@@ -1,0 +1,6 @@
+name: Snow-Model
+version: 1.0.0
+author: SnowyMC
+description: 基础插件模板
+command-prefix: snowmodel   # 主命令名
+permission-prefix: snow.model # 权限前缀

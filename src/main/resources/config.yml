@@ -1,0 +1,4 @@
+debug: false
+language: auto   # 可选值：auto / en_US / zh_CN / ...
+feature:
+  greet-on-join: true

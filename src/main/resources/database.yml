@@ -1,0 +1,10 @@
+type: sqlite # sqlite/mysql
+sqlite:
+  file: data.db
+mysql:
+  host: 127.0.0.1
+  port: 3306
+  database: snow
+  user: root
+  password: ""
+  params: "useSSL=false&characterEncoding=utf8"

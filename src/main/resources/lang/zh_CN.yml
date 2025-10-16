@@ -1,0 +1,15 @@
+join:
+  welcome: "&b欢迎，{player}！&7（Snow-Model）"
+command:
+  unknown: "&c未找到子命令。"
+  no-permission: "&c无权限。"
+  reloaded: "&a配置与语言文件已重载。"
+  info-header: "&b{plugin} &7v{version}"
+  info-author: "&7作者: &f{author}"
+  info-desc: "&7描述: &f{desc}"
+help:
+  header: "&b{plugin} &7v{version}"
+  list:
+    - "&f/snow help &7- 显示帮助"
+    - "&f/snow reload &7- 重载配置与语言文件"
+    - "&f/snow info &7- 显示插件信息"

@@ -1,0 +1,15 @@
+join:
+  welcome: "&bWelcome, {player}! &7(Snow-Model)"
+command:
+  unknown: "&cUnknown subcommand."
+  no-permission: "&cYou don't have permission."
+  reloaded: "&aConfigs and languages reloaded."
+  info-header: "&b{plugin} &7v{version}"
+  info-author: "&7Author: &f{author}"
+  info-desc: "&7Description: &f{desc}"
+help:
+  header: "&b{plugin} &7v{version}"
+  list:
+    - "&f/snow help &7- Show help"
+    - "&f/snow reload &7- Reload configs and languages"
+    - "&f/snow info &7- Show plugin info"

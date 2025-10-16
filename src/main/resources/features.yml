@@ -1,0 +1,4 @@
+features:
+  example-feature:
+    enabled: true
+    value: 10

@@ -1,0 +1,52 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group = findProperty("pluginGroup")
+version = findProperty("pluginVersion")
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://repo.papermc.io/repository/maven-public/' }
+    maven { url = 'https://jitpack.io' }
+}
+
+dependencies {
+    compileOnly "io.papermc.paper:paper-api:${findProperty('paperApi')}"
+    implementation 'org.yaml:snakeyaml:2.2'
+}
+
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(findProperty("javaVersion") as String) }
+    withSourcesJar()
+}
+
+tasks.compileJava {
+    options.encoding = 'UTF-8'
+}
+
+tasks.processResources {
+    filteringCharset = 'UTF-8'
+    filesMatching('plugin.yml') {
+        expand([
+                name            : project.name,
+                version         : version,
+                author          : findProperty("author"),
+                mainClass       : findProperty("mainClass"),
+                commandPrefix   : findProperty("commandPrefix"),
+                permissionPrefix: findProperty("permissionPrefix")
+        ])
+    }
+}
+
+tasks.shadowJar {
+    archiveClassifier.set('')
+    minimize()
+}
+
+tasks.register('devRunHint') {
+    doLast {
+        println "Build complete. Copy build/libs/${project.name}-${version}.jar to your server plugins/"
+    }
+}
