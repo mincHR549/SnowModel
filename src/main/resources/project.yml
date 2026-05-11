@@ -1,6 +1,6 @@
-name: Snow-Model
+name: SnowChat
 version: 1.0.0
 author: SnowyMC
-description: 基础插件模板
-command-prefix: snowmodel   # 主命令名
-permission-prefix: snow.model # 权限前缀
+description: SnowChat 插件
+command-prefix: snowchat
+permission-prefix: snow.chat

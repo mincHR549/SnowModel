@@ -1,14 +1,14 @@
-package snowymc.top.snowmodel;
+package snowymc.top.snowchat;
 
-import snowymc.top.snowmodel.bootstrap.CommandRegistry;
-import snowymc.top.snowmodel.bootstrap.ListenerRegistry;
-import snowymc.top.snowmodel.config.ConfigManager;
-import snowymc.top.snowmodel.config.ProjectMeta;
+import snowymc.top.snowchat.bootstrap.CommandRegistry;
+import snowymc.top.snowchat.bootstrap.ListenerRegistry;
+import snowymc.top.snowchat.config.ConfigManager;
+import snowymc.top.snowchat.config.ProjectMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public class SnowModel extends JavaPlugin {
+public class SnowChat extends JavaPlugin {
 
-    private static SnowModel instance;
+    private static SnowChat instance;
     private ConfigManager configManager;
     private ProjectMeta meta;
 
@@ -44,7 +44,7 @@ public class SnowModel extends JavaPlugin {
         getLogger().info(meta.getName() + " disabled.");
     }
 
-    public static SnowModel get() { return instance; }
+    public static SnowChat get() { return instance; }
     public ConfigManager getConfigManager() { return configManager; }
     public ProjectMeta getMeta() { return meta; }
 }
