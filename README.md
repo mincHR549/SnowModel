@@ -17,7 +17,37 @@
 
 ## 🚀 新项目启动流程
 
-### 1. 修改必要文件
+### 方式一：使用初始化脚本（推荐）
+
+```bash
+# 克隆模板
+git clone https://github.com/mincHR549/SnowModel.git MyPlugin
+cd MyPlugin
+
+# 运行初始化脚本
+./init-project.sh <项目名> <包名> <主类名> [作者] [命令前缀] [权限前缀]
+
+# 示例
+./init-project.sh SnowChat snowymc.top.snowchat SnowChat SnowyMC snowchat snow.chat
+
+# 构建
+gradle build
+```
+
+**脚本参数说明：**
+
+| 参数 | 必填 | 说明 | 示例 |
+|------|------|------|------|
+| 项目名 | ✅ | gradle 项目名 | SnowChat |
+| 包名 | ✅ | Java 包名 | snowymc.top.snowchat |
+| 主类名 | ✅ | 主类名 | SnowChat |
+| 作者 | ❌ | 默认 Unknown | SnowyMC |
+| 命令前缀 | ❌ | 默认小写项目名 | snowchat |
+| 权限前缀 | ❌ | 默认小写.小写 | snow.chat |
+
+---
+
+### 方式二：手动修改
 
 **settings.gradle**
 
